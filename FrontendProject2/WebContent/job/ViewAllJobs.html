@@ -1,0 +1,64 @@
+<div class="container" ng-controller="JobController" ng-init="listAllJobs()">
+  
+ 
+  <h2 ><i class="fa fa-th-list"></i>All Jobs</h2>
+  <div class="panel panel-danger" ng-repeat="job in allJobs">
+  
+	<table class="table-responsive">
+    
+      <tr>
+        <td><h5 class="text-danger"><b>Job Designation :</b></h5></td>
+       <td> {{job.jobDesignation}}</td>
+       
+      </tr>
+      <tr >
+      <td><h5 class="text-danger"><b>Job Description :</b></h5></td>
+     <td> {{job.jobDesc}}</td>
+      </tr> 
+      <tr>
+        <td><h5 class="text-danger"><b>Company :</b></h5></td>
+        <td>{{job.company}}</td>
+      </tr>
+      <tr>
+      <td>  <h5 class="text-danger"><b> Location :</b></h5></h5>
+       <td> {{job.location}}</td>
+      </tr>
+      <tr>
+       <td> <h5 class="text-danger"><b>Salary :</b></h5></td>
+       <td> {{job.salary}}</td>
+      </tr>
+      <tr>
+        <h5 class="text-danger"><b>Last date to apply :</b><h5>
+        {{job.lastDateApply}}
+      </tr> 
+       </table>  
+       
+       <button type="submit" class="btn btn-primary" ng-click="addApplyJob(job.jobId)"> Apply Now </button><br/>
+  
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

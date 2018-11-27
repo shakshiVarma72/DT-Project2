@@ -1,0 +1,73 @@
+<div class="container"  ng-controller="userController" ng-init="fetchUserDetails()">
+
+<h2><i class="fa fa-th-list"></i> Details </h2>
+<div class="col-md-12" align="center">
+<div class="thumbnail">
+<br>
+<img id="img1"  
+					src="http:\\localhost:8088/Middleware1w/viewProfilePicture/{{currentUser.loginName}}"
+					onerror="if (this.src != 'images/profilepicture.png') this.src = 'images/profilepicture.png';"
+					style="height:120px;width:150px" onshow="checkSRC"></li> <br/><br/>
+			
+<h2>{{currentUser.firstName}} {{currentUser.lastName}}</h2>
+<a href="#!updateProfile"><span class="glyphicon glyphicon-edit"></span></a>
+<a href="#!UploadProfilePicture"><span class="glyphicon glyphicon-upload"></span></a>
+<hr>
+<h3 style="color:red">{{user.firstName}}</h3>
+<h3 style="color:red">{{user.lastName}}</h3>
+<h3 style="color:red">{{user.loginName}}</h3>
+<h3 style="color:red">{{user.email}}</h3>
+<h3 style="color:red">{{user.role}}</h3>
+<h3 style="color:red">{{user.mobileNumber}}</h3>
+
+</div>
+</div>
+</div>
+
+
+
+
+<!-- <div class="container" ng-controller="userController" data-ng-init="fetchUserDetails()">
+	<h2>View Profile</h2>
+	<table class="table table-striped">
+	<thead>
+      <tr>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>LoginName</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Role</th>
+        <th>Mobile Number </th>
+         <th>Profile Picture </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    <tbody>
+      <tr>
+        <td>{{user.firstName}}</td>
+        <td>{{user.lastName}}</td>
+        <td>{{user.loginName}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.mobileNumber}}</td>
+        <td><img id="img1"  
+					src="http:\\localhost:8088/Middleware1w/viewProfilePicture/{{currentUser.loginName}}"
+					onerror="if (this.src != 'images/profilepicture.png') this.src = 'images/profilepicture.png';"
+					style="height:120px;width:150px" onshow="checkSRC"></li> <br/><br/>
+			
+				
+        </td>
+</tr>
+</tbody>
+</table>
+</div>
+			
+			
+			
+			
+			
+
+   -->

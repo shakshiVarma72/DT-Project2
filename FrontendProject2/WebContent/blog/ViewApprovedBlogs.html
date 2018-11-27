@@ -1,0 +1,40 @@
+<<div class="container" ng-controller="blogController" ng-init="listAllApprovedBlogs()">
+  
+ 
+  <h2 ><i class="fa fa-th-list"></i>All Blogs</h2>
+  <div class="panel panel-danger" ng-repeat="blog in allBlogs">
+  
+	<table class="table-responsive">
+    
+      <tr>
+       <h4 class="text-danger"><b>Blog Name:</b></h4>
+      {{blog.blogName}}
+      </tr>
+    
+   
+      <tr >
+      <h4 class="text-danger"><b>Blog Content:</b></h4> {{blog.blogContent}}
+      </tr>     
+      <tr>
+  <td>Likes:{{Likes}} </td>
+  <td><a ng-click="incrementBlogLikes(blog.blogId)">
+          <i class="glyphicon glyphicon-thumbs-up"></i>
+        </a> </td>
+   </tr>
+   <tr> 
+   <td>status :</td>
+   <td>{{ blog.status }}</td>
+   </tr>
+   <br/>
+   
+  
+  </table>
+ <button type="submit" class="btn btn-primary" ng-click="addblogComment(blog.blogId)"><span class="glyphicon glyphicon-comment" >AddComment</span></button></a>
+ <br/>
+ </br/>
+ 
+ <a href="#!ViewBlogComment" > <h4> <u><strong>ViewAllComment<i class="glyphicon glyphicon-eye-open"></i></strong></u></h4></a>
+	</div>
+
+	
+</div>

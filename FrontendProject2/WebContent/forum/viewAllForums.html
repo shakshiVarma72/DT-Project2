@@ -1,0 +1,21 @@
+<div class="container" ng-controller="forumController" ng-init="listAllForums()">
+  
+  <h1>All Forums</h1>
+	<table class="table">
+    <thead>
+      <tr>
+        <th>Forum Name</th>
+        <th>Forum Content</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="forum in allForums">
+        <td>{{forum.forumName}}</td>
+        <td>{{forum.forumContent}}</td>
+      </tr>      
+    </tbody>
+  </table>
+	
+	<br/><br/><br/>
+	
+</div>

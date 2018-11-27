@@ -1,0 +1,33 @@
+
+<div class="container"  ng-controller="blogController" ng-init="listAllBlogComments()">
+
+<h2><i class="fa fa-th-list"></i> All Comments</h2>
+<div class="panel panel-primary col-md-8" ng-repeat="blog in allBlogComment">
+<table class="table-responsive">
+<tr>
+  <td> Blog Comment : </td>
+  <td>{{blog.commentText}}</td>
+  </tr>
+  <br>
+<tr>  
+  <td> Blog Id : </td>
+  <td>{{blog.blogId}}</td>
+</tr>
+<tr>  
+  <td> Blog Comment Date : </td>
+  <td>{{blog.commentDate}}</td>
+</tr>
+
+
+<!-- <tr>
+	<td><button type="submit" class="btn btn-success" ng-show="currentUser.role=='Role_Admin'" ng-click="approveBlog(blog.blogId)">Approve</button></td>
+	<td><button type="submit" class="btn btn-danger" ng-show="currentUser.role=='Role_Admin'" ng-click="rejectBlog(blog.blogId)"> Reject</button></td>
+</tr>
+  -->
+<br/>
+<br/>
+
+
+</table>
+</div>
+</div>

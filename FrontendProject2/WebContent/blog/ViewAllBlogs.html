@@ -1,0 +1,34 @@
+<div class="container" ng-controller="blogController" ng-init="listAllBlogs()">
+  
+ 
+  <h2 ><i class="fa fa-th-list"></i>All Blogs</h2>
+  <div class="panel panel-danger" ng-repeat="blog in allBlogs">
+  
+	<table class="table-responsive">
+    
+      <tr>
+       <td> <h4 class="text-danger"><b>Blog Name</b></h4></td>
+        <td>{{blog.blogName}}</td>
+      </tr>
+    
+   
+      <tr >
+     <td> <h4 class="text-danger"><b>Blog Content</b></h4></td>
+     <td> {{blog.blogContent}}</td>
+      </tr>      
+      <tr>
+   <td>Likes:{{blog.likes}} </td>
+  <td><a ng-click="incrementBlogLikes(blog.blogId)">
+          <i class="glyphicon glyphicon-thumbs-up"></i>
+        </a> </td>
+   </tr>
+   <tr> 
+   <td>status</td>
+   <td>{{ blog.status}}</td>
+   </tr>
+   <br/>
+   
+  </table>
+	</div>
+	
+</div>
